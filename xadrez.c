@@ -9,6 +9,8 @@ int main() {
     const int CASAS_TORRE = 5;
     const int CASAS_BISPO = 5;
     const int CASAS_RAINHA = 8;
+    const int CASAS_CAVALO_BAIXO = 2;
+    const int CASAS_CAVALO_ESQUERDA = 1;
 
     // Implementacao de Movimentacao do Bispo
     printf("\n=== MOVIMENTO DO BISPO ===\n");
@@ -37,8 +39,18 @@ int main() {
     } while (casa_rainha <= CASAS_RAINHA);
 
     // Nivel Aventureiro - Movimentacao do Cavalo
-    // Sugestao: Utilize loops aninhados para simular a movimentacao do Cavalo em L.
-    // Um loop pode representar a movimentacao horizontal e outro vertical.
+    printf("\n=== MOVIMENTO DO CAVALO ===\n");
+    printf("Movendo em L: duas casas para baixo e uma casa para a esquerda:\n");
+    int quantidades[] = {CASAS_CAVALO_BAIXO, CASAS_CAVALO_ESQUERDA};
+    char *direcoes[] = {"Baixo", "Esquerda"};
+    int direcao;
+    for (direcao = 0; direcao < 2; direcao++) {
+        int casas = 1;
+        while (casas <= quantidades[direcao]) {
+            printf("%s\n", direcoes[direcao]);
+            casas++;
+        }
+    }
 
     // Nivel Mestre - Funcoes Recursivas e Loops Aninhados
     // Sugestao: Substitua as movimentacoes das pecas por funcoes recursivas.
